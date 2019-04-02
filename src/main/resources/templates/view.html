@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit">
+    <title>图片查看</title>
+    <link rel="shortcut icon" th:href="@{/favicon.ico}"/>
+    <link th:href="@{/static/css/layui.css}" rel="stylesheet"/>
+</head>
+<body>
+<div class="layui-container">
+
+<div class="layui-row">
+    <div class="col-2">&nbsp;</div>
+    <div class="col-8">
+        <table class="layui-table" lay-size="sm">
+            <thead>
+            <tr>
+                <th>名称</th>
+                <th>url</th>
+                <th>上传时间</th>
+                <th>账号</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="entries:${list}">
+                <td><p th:text="${entries['pic_name']}"></p></td>
+                <td><p th:text="${entries['pic_url']}"></p></td>
+                <td><p th:text="${entries['create_user']}"></p></td>
+                <td><p th:text="${entries['create_date']}"></p></td>
+
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-2">&nbsp;</div>
+
+
+</div>
+
+<script th:src="@{/static/js/jquery.min.js}"></script>
+<script th:src="@{/static/layui.js}"></script>
+<script th:src="@{/static/js/global.js}"></script>
+
+<script>
+
+
+/* 鼠标点击特效 */
+var a_idx = 0;
+jQuery(document).ready(function($) {
+    $("body").click(function(e) {
+var a = new Array("富强", "民主", "文明", "和谐", "自由", "平等", "公正" ,"法治", "爱国", "敬业", "诚信", "友善");
+var $i = $("<span/>").text(a[a_idx]);
+        a_idx = (a_idx + 1) % a.length;
+var x = e.pageX,
+        y = e.pageY;
+        $i.css({
+"z-index": 999999999999999999999999999999999999999999999999999999999999999999999,
+"top": y - 20,
+"left": x,
+"position": "absolute",
+"font-weight": "bold",
+"color": "#ff6651"
+        });
+        $("body").append($i);
+        $i.animate({
+"top": y - 180,
+"opacity": 0
+        },
+        1500,
+function() {
+            $i.remove();
+        });
+    });
+});
+</script>
+</body>
+</html>

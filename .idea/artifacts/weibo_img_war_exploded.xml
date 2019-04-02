@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="exploded-war" name="weibo-img:war exploded">
-    <output-path>$PROJECT_DIR$/../weibo-img/target/weibo-img-0.0.1-SNAPSHOT</output-path>
+    <output-path>$PROJECT_DIR$/target/weibo-img-0.0.1-SNAPSHOT</output-path>
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
@@ -55,7 +55,7 @@
         </element>
       </element>
       <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/../weibo-img/target/weibo-img-0.0.1-SNAPSHOT/META-INF/MANIFEST.MF" />
+        <element id="file-copy" path="$PROJECT_DIR$/target/weibo-img-0.0.1-SNAPSHOT/META-INF/MANIFEST.MF" />
       </element>
       <element id="javaee-facet-resources" facet="weibo-img/web/Web" />
     </root>

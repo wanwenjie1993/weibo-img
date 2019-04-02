@@ -1,0 +1,121 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+.jsxs-title{
+	position:relative;
+	margin-top: 10px;
+}
+.jsxs-sc{
+	display: flex;
+	justify-content: center;
+	
+}
+.form-control{
+	margin: 0 auto;
+	position: relative;
+	top: 10px;
+	resize: none;
+	height: 188px;
+	background-color: rgba(255, 255, 255, .3);
+	display: block;
+	width: 80%;
+	padding: .375rem .75rem;
+	font-size: 1rem;
+	line-height: 1.5;
+	color: #495057;
+	background-clip: padding-box;
+	border: 1px solid #ced4da;
+	border-radius: .25rem;
+	transition: border-color .15s ease-in-out,
+	box-shadow .15s ease-in-out;
+}
+.form-control:focus {
+	color: #495057;
+	background-color: #fff;
+	border-color: #80bdff;
+	outline: 0;
+	box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, .25);
+}
+input {
+	opacity: 0;
+	width: 134px;
+	height: 57px;
+	position: absolute;
+	display: inline-block;
+}
+.jsxs-sc .layui-row button{
+	height: 50px;
+}
+#url_upload_model{
+	display: none;
+}
+body {
+	cursor: url(https://blog.oioweb.cn/assets/normal.cur), default;
+}
+
+a:hover {
+	cursor: url(https://blog.oioweb.cn/assets/link.cur), pointer;
+}
+.jsxs-an{
+	display: flex;
+	justify-content: flex-end;
+	position: relative;
+	top: 20px;
+	left: -50px;
+}
+.form-control-jsxs{
+	margin: 0 auto;
+	position: relative;
+	top: 10px;
+	resize: none;
+	height: 188px;
+	background-color: rgba(255, 255, 255, .3);
+	display: block;
+	width: 80%;
+	padding: .375rem .75rem;
+	font-size: 1rem;
+	line-height: 1.5;
+	color: #495057;
+	background-clip: padding-box;
+	border: 1px solid #ced4da;
+	border-radius: .25rem;
+	transition: border-color .15s ease-in-out,
+	box-shadow .15s ease-in-out;
+}
+.form-control-jsxs:focus {
+	color: #495057;
+	background-color: #fff;
+	border-color: #80bdff;
+	outline: 0;
+	box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, .25);
+}
+body::-webkit-scrollbar {
+	width: 5px;
+	height: 5px;
+}
+
+body::-webkit-scrollbar-button {
+	width: 0;
+	height: 0;
+	background-color: royalblue;
+}
+
+body::-webkit-scrollbar-track {
+	background: #ccc;
+	border-radius: 5px;
+}
+
+body::-webkit-scrollbar-thumb {
+	background: #0093ff;
+	border-radius: 5px;
+}
+
+body::-webkit-scrollbar-corner {
+	background: #82AFFF;
+}
+
+body::-webkit-scrollbar-resizer {
+	background: #FF0BEE;
+}
