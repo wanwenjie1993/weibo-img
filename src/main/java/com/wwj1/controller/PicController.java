@@ -41,7 +41,7 @@ public class PicController extends Response{
 	@RequestMapping({"/view"})
 	public String view(Model model){
 		try {
-		List<Map<String, Object>> list=	findModeResult("select * from t_pic",null);
+		List<Map<String, Object>> list=	findModeResult("select * from b3_solo_wbimg",null);
 		logger.info("list:"+list);
 			model.addAttribute("list", list);
 		}catch (SQLException e) {
@@ -59,7 +59,7 @@ public class PicController extends Response{
 	public Message<List<String>> upload(@RequestParam("file") MultipartFile[] multipartFiles, 
 			@RequestParam(value="size", required=false, defaultValue="0") Integer size) throws IOException, ServiceException {
 		String userName="1315131416@qq.com";
-		String passWord="weilian.w";
+		String passWord="xxxx";
 		if(GeneralUtils.isEmpty(multipartFiles)) {
 			throw new ServiceException("图片不能为空");
 		}
@@ -68,7 +68,7 @@ public class PicController extends Response{
 		List<String> url = SinaPicBedUtil.uploadFile(multipartFiles, cookies, size);
 		logger.info("multipartFiles:"+multipartFiles[0].getOriginalFilename());
 		logger.info("url:"+url.get(0));
-		String sql="INSERT INTO `weiboPic`.`t_pic` (`pic_name`, `pic_url`, `create_user`) VALUES  ( '"+multipartFiles[0].getOriginalFilename()+"','"+url.get(0)+"','"+userName+"')";
+		String sql="INSERT INTO `solo`.`b3_solo_wbimg` (`pic_name`, `pic_url`, `create_user`) VALUES  ( '"+multipartFiles[0].getOriginalFilename()+"','"+url.get(0)+"','"+userName+"')";
 		logger.info("sql:"+sql);
 		  try {
 			  executeUpdateBySQL(sql); 
