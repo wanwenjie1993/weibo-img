@@ -59,7 +59,7 @@ public class PicController extends Response{
 	public Message<List<String>> upload(@RequestParam("file") MultipartFile[] multipartFiles, 
 			@RequestParam(value="size", required=false, defaultValue="0") Integer size) throws IOException, ServiceException {
 		String userName="1315131416@qq.com";
-		String passWord="xxxx";
+		String passWord="pwd";
 		if(GeneralUtils.isEmpty(multipartFiles)) {
 			throw new ServiceException("图片不能为空");
 		}

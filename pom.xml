@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.ezvn</groupId>
-    <artifactId>weibo-img</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <packaging>war</packaging>
+    <artifactId>img</artifactId>
+    <version>0.0.1</version>
+    <packaging>jar</packaging>
     <name>weibo-img</name>
     <description>weibo-img project for Spring Boot</description>
 

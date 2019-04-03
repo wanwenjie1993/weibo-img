@@ -41,12 +41,12 @@ public class DbPoolConnection {
 			throw new IllegalArgumentException(
 					"Properties file path can not be null : " + fullFile);
 		webRootPath = DbPoolConnection.class.getClassLoader().getResource("").getPath();
-		//webRootPath = new File(webRootPath).getParent();
-		System.out.println("目录:"+webRootPath.substring(1, webRootPath.length())+ fullFile);
+		webRootPath = new File(webRootPath).getParent()+"\\";
+		System.out.println("目录:"+webRootPath+ fullFile);
 		InputStream inputStream = null;
 		Properties p = null;
 		try {
-			inputStream = new FileInputStream(new File(webRootPath.substring(1, webRootPath.length())+ fullFile));
+			inputStream = new FileInputStream(new File("/root/config/db_server.properties"));
 			p = new Properties();
 			p.load(inputStream);
 		} catch (FileNotFoundException e) {
